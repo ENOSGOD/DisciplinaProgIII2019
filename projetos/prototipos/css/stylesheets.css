@@ -1,0 +1,71 @@
+body{
+  background-color: #d9d9d9
+}
+* {
+  box-sizing: border-box;
+}
+#mainSection{
+  margin: 0 auto;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  border-color: gray;
+  margin-top: 5em;
+  padding: 15px;
+}
+.clone{
+  color: #2a4b7c;
+}
+
+#mainSectionFooter{
+  margin: 0 auto;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  margin-top: 1em;
+  padding: 10px;
+}
+#mainSectionLogin{
+  margin: 0 auto;
+  width: 500px;
+  background-color: white;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  height: 250px;
+  box-shadow: 1px 1px 100px 1px;
+  padding: 15px;
+}
+
+i{
+  color: #DD4132;
+}
+
+#logo{
+  font-size: 40px;
+}
+#botaoCadastro{
+  height: 30px;
+  width: 75%;
+  color: white;
+  background-color: #325281;
+  padding: 10px;
+}
+#botaoLogin{
+  height: 30px;
+  width: 30%;
+  color: white;
+  background-color: #325281;
+}
+#formCadastra{
+  height: 15px;
+  height: 40px;
+  padding: 1px;
+}
+#widthBox{
+  width: 75%;
+  height: 60%;
+  border-color: silver;
+  padding: 10px;
+}
