@@ -16,21 +16,30 @@ if (empty($tel)) {
 if (empty($email)) {
   die("E-mail obrigatório");
 }
-try{
-  $sql = "INSERT INTO usuarios(nome, apelido, tel, email) VALUES (:nome, :apelido, :tel,:email)";
-  $stmt = getConnection()->prepare($sql);
-  $stmt->bindParam(':nome', $nome);
-  $stmt->bindParam(':apelido', $apelido);
-  $stmt->bindParam(':tel', $tel);
-  $stmt->bindParam(':email', $email);
-  if ($stmt->execute())
-    echo "Sucesso";
-  else
-    echo "Falha";
-}catch(PDOException $e) {
-  echo 'Erro: ' . $e->getMessage();
-}
-
-
+if(filter_var($email, FILTER_VALIDATE_EMAIL))
+ {
+  try{
+    $sql = ;
+    $stmt =$pdo->prepare("INSERT INTO 'usuarios'('nome', 'apelido', 'tel', 'email') 'VALUES' ('?','?','?','?')");
+    $stmt->execute(array($nome, $apelido,$tel,$email));
+    if ($stmt->execute())
+      echo "Sucesso";
+    else
+      echo "Falha";
+  }catch(PDOException $e) {
+    echo 'Erro: ' . $e->getMessage();
+  }
+  if($insert){
+          echo"<script>alert('Usuário cadastrado com sucesso!');window.location.
+          href='listarusuarios.php'</script>";
+        }else{
+          echo"<script> alert('Não foi possível cadastrar esse usuário');window.location
+          .href='index.html'</script>";
+        }
+ }
+ else
+ {
+   echo "Email incorreto";
+ }
 
 ?>
